@@ -1,5 +1,12 @@
-import React from 'react';
+import React, {Fragment} from 'react';
 
-const Display = (prop) => <h1> {prop.value} </h1>
+const Display = ({value = 0, msg = ''}) => {
+    return (
+        <Fragment>
+            <p>{msg}</p>
+            <h1> { value || '' } </h1>
+        </Fragment>
+    );
+}
 
 export default Display;

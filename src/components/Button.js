@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Button = (props) => {
-    const handleClick = () => props.click();
-    return <button onClick={handleClick}>{props.text} </button>;
+const Button = ({click, text}) => {
+    const handleClick = () => click();
+    return <button onClick={handleClick}>{text} </button>;
 }
 
 export default Button;
